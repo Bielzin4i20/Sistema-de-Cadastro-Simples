@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page de Cadastro</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Cadastre</h1>
+    <nav id="menu">
+      <a href="#hero">Início</a>
+      <a href="#info">Como Funciona</a>
+      <a href="#footer">Contato</a>
+    </nav>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+  </header>
+
+  <main id="hero">
+    <h2>Cadastre-se e veja como funciona!</h2>
+    <p>Nosso sistema envia seu cadastro diretamente para nosso e-mail e ainda envia uma mensagem de boas-vindas para você.</p>
+
+    <form id="cadastroForm">
+      <input type="text" id="nome" placeholder="Seu nome" required />
+      <input type="email" id="email" placeholder="Seu e-mail" required />
+      <button type="submit" id="btnEnviar">Cadastrar</button>
+    </form>
+
+  <div id="contador" class="contador">
+    <span id="contadorNumero">0</span> cadastros realizados 🚀
+  </div>
+
+    <div class="success-msg" id="successMsg">Contador de Cadastros!</div>
+  </main>
+
+  <section class="info-section" id="info">
+    <div class="card">
+      <h3>📩 Envio Automático</h3>
+      <p>Cada cadastro é enviado direto para o e-mail do administrador.</p>
+    </div>
+    <div class="card">
+      <h3>👋 Boas-vindas Automáticas</h3>
+      <p>O usuário recebe instantaneamente um e-mail de boas-vindas.</p>
+    </div>
+    <div class="card">
+      <h3>🔒 Simples e Seguro</h3>
+      <p>Sem servidores ou backend — tudo feito via EmailJS, rápido e confiável.</p>
+    </div>
+  </section>
+
+  <div id="toast" class="toast"></div>
+
+  <footer id="footer">
+    &copy; 2025 Desenvolvido por Gabriel Lucas.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

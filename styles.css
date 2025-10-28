@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #5a2ec0, #2e8af6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  
+  nav a {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  nav a:hover {
+    color: #ffeb3b;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  
+  /* Hero */
+  main {
+    flex: 1;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  main h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  
+  main p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  input {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #ffeb3b;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    background: #ffd600;
+  }
+
+  .contador {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    transition: 0.4s;
+  }
+  
+  .contador span {
+    color: #ffeb3b;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }  
+  
+  /* Info Cards */
+  .info-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease;
+  }
+  
+  .card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+  }
+  
+  /* Toast message */
+  .toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s ease;
+    z-index: 1000;
+  }
+  
+  .toast.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px;
+      border-radius: 10px;
+    }
+    nav.show {
+      display: flex;
+    }
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
