@@ -6,6 +6,11 @@ const toast = document.getElementById("toast");
 const cards = document.querySelectorAll(".card");
 const menuToggle = document.getElementById("menuToggle");
 const menu = document.getElementById("menu");
+const contadorNumero = document.getElementById("contadorNumero");
+
+// Recupera o valor salvo no localStorage (ou começa em 0)
+let totalCadastros = parseInt(localStorage.getItem("totalCadastros")) || 0;
+contadorNumero.textContent = totalCadastros;
 
 // Mostra animação de "toast"
 function showToast(msg) {
